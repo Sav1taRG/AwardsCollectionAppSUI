@@ -31,10 +31,10 @@ struct MainView: View {
                     strokeColor: .white,
                     strokeWidth: 0.5,
                     shadowColor: .green,
-                    shadowRadius: 30
+                    shadowRadius: 50
                 )
                 
-                    .frame(width: 250, height: 250)
+                    .frame(width: 300, height: 300)
                     .transition(.leadingSlide)
             }
             
@@ -47,8 +47,8 @@ struct MainView: View {
     private func buttonAction() {
         withAnimation {
             awardIsShowing.toggle()
+            cloverIsExpanded.toggle()
         }
-        cloverIsExpanded.toggle()
     }
 }
 

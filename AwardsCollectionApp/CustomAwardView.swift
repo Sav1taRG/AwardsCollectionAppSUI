@@ -61,7 +61,9 @@ struct CustomAwardView: View {
             )
         }
         
-        .animation(.interpolatingSpring(stiffness: 100, damping: 10),
+        .animation(.interpolatingSpring(stiffness: 100, damping: 10)
+            .delay(0.1)
+            .speed(0.5),
                    value: cloverIsExpanded)
     }
 }
