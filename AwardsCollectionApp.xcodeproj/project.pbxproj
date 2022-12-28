@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3004BC48295BA2F500C85397 /* CloverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3004BC47295BA2F500C85397 /* CloverView.swift */; };
-		3004BC4A295BB55A00C85397 /* CustomAwardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3004BC49295BB55A00C85397 /* CustomAwardView.swift */; };
+		3004BC48295BA2F500C85397 /* CloverLeafView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3004BC47295BA2F500C85397 /* CloverLeafView.swift */; };
+		3004BC4A295BB55A00C85397 /* CloverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3004BC49295BB55A00C85397 /* CloverView.swift */; };
 		A89D0931267B76D400C1FB66 /* AwardsCollectionAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D0930267B76D400C1FB66 /* AwardsCollectionAppApp.swift */; };
 		A89D0933267B76D400C1FB66 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D0932267B76D400C1FB66 /* MainView.swift */; };
 		A89D0935267B76D600C1FB66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A89D0934267B76D600C1FB66 /* Assets.xcassets */; };
@@ -22,8 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3004BC47295BA2F500C85397 /* CloverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloverView.swift; sourceTree = "<group>"; };
-		3004BC49295BB55A00C85397 /* CustomAwardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAwardView.swift; sourceTree = "<group>"; };
+		3004BC47295BA2F500C85397 /* CloverLeafView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloverLeafView.swift; sourceTree = "<group>"; };
+		3004BC49295BB55A00C85397 /* CloverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloverView.swift; sourceTree = "<group>"; };
 		A89D092D267B76D400C1FB66 /* AwardsCollectionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwardsCollectionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A89D0930267B76D400C1FB66 /* AwardsCollectionAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsCollectionAppApp.swift; sourceTree = "<group>"; };
 		A89D0932267B76D400C1FB66 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -76,8 +76,8 @@
 				A8E1B482267B7972005E98AA /* GradientRectangles.swift */,
 				A8E1B484267B7978005E98AA /* PathView.swift */,
 				A8E1B480267B7967005E98AA /* CurvesView.swift */,
-				3004BC47295BA2F500C85397 /* CloverView.swift */,
-				3004BC49295BB55A00C85397 /* CustomAwardView.swift */,
+				3004BC47295BA2F500C85397 /* CloverLeafView.swift */,
+				3004BC49295BB55A00C85397 /* CloverView.swift */,
 				A89D0934267B76D600C1FB66 /* Assets.xcassets */,
 				A89D0939267B76D600C1FB66 /* Info.plist */,
 				A89D0936267B76D600C1FB66 /* Preview Content */,
@@ -165,11 +165,11 @@
 				A8A20B572837907D00C7401B /* CartRacingView.swift in Sources */,
 				A8E1B481267B7967005E98AA /* CurvesView.swift in Sources */,
 				A89D0942267B77C800C1FB66 /* AwardsView.swift in Sources */,
-				3004BC48295BA2F500C85397 /* CloverView.swift in Sources */,
+				3004BC48295BA2F500C85397 /* CloverLeafView.swift in Sources */,
 				A89D0933267B76D400C1FB66 /* MainView.swift in Sources */,
 				A8E1B485267B7979005E98AA /* PathView.swift in Sources */,
 				A89D0931267B76D400C1FB66 /* AwardsCollectionAppApp.swift in Sources */,
-				3004BC4A295BB55A00C85397 /* CustomAwardView.swift in Sources */,
+				3004BC4A295BB55A00C85397 /* CloverView.swift in Sources */,
 				A89D0940267B777E00C1FB66 /* StarterView.swift in Sources */,
 				A8E1B483267B7972005E98AA /* GradientRectangles.swift in Sources */,
 			);

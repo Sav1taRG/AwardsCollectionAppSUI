@@ -8,60 +8,69 @@
 import SwiftUI
 
 struct CloverView: View {
+    
+    @Binding var cloverIsExpanded: Bool
+    
     var color1: Color
     var color2: Color
-    var rotation: Double
     var strokeColor: Color
     var strokeWidth: Double
     var shadowColor: Color
     var shadowRadius: CGFloat
     
     var body: some View {
-        
-        GeometryReader { geometry in
-            let width = geometry.size.width
-            let height = geometry.size.height
-            let size = min(width, height)
-            let middle = size / 2
-            let farLine = size * 0.9
-            let nearLine = size * 0.1
+        ZStack {
+            CloverLeafView(
+                color1: color1,
+                color2: color2,
+                rotation: 0,
+                strokeColor: strokeColor,
+                strokeWidth: strokeWidth,
+                shadowColor: shadowColor,
+                shadowRadius: shadowRadius
+            )
             
-            ZStack {
-                Path { path in
-                    path.move(to: CGPoint(x: middle, y: nearLine / 0.5 ))
-                    path.addQuadCurve(
-                        to: CGPoint(x: middle, y: middle),
-                        control: CGPoint(x: nearLine, y: nearLine)
-                    )
-                    path.addQuadCurve(
-                        to: CGPoint(x: middle, y: nearLine / 0.5),
-                        control: CGPoint(x: farLine, y: nearLine)
-                    )
-                }
-                .fill(
-                    RadialGradient(
-                        colors: [color1, color2],
-                        center: .center,
-                        startRadius: size * 0.05,
-                        endRadius: size * 0.5
-                    )
-                )
-                .shadow(color: shadowColor, radius: shadowRadius)
-                
-                Path { path in
-                    path.move(to: CGPoint(x: middle, y: nearLine / 0.4 ))
-                    path.addLine(to: CGPoint(x: middle, y: middle / 1.1))
-                }
-                .stroke(strokeColor, style: StrokeStyle(lineWidth: strokeWidth))
-            }
-            .rotationEffect(.degrees(rotation))
+            CloverLeafView(
+                color1: color1,
+                color2: color2,
+                rotation: cloverIsExpanded ? 90 : 0,
+                strokeColor: strokeColor,
+                strokeWidth: strokeWidth,
+                shadowColor: shadowColor,
+                shadowRadius: shadowRadius
+            )
+            
+            CloverLeafView(
+                color1: color1,
+                color2: color2,
+                rotation: cloverIsExpanded ? 180 : 0,
+                strokeColor: strokeColor,
+                strokeWidth: strokeWidth,
+                shadowColor: shadowColor,
+                shadowRadius: shadowRadius
+            )
+            
+            CloverLeafView(
+                color1: color1,
+                color2: color2,
+                rotation: cloverIsExpanded ? 270 : 0,
+                strokeColor: strokeColor,
+                strokeWidth: strokeWidth,
+                shadowColor: shadowColor,
+                shadowRadius: shadowRadius
+            )
         }
+        
+        .animation(.interpolatingSpring(stiffness: 100, damping: 10)
+            .delay(0.1)
+            .speed(0.5),
+                   value: cloverIsExpanded)
     }
 }
 
-struct CustomAwardView_Previews: PreviewProvider {
+struct CloverView_Previews: PreviewProvider {
     static var previews: some View {
-        CloverView(color1: .green, color2: .gray, rotation: 0, strokeColor: .white, strokeWidth: 0.5, shadowColor: .green, shadowRadius: 30)
+        CloverView(cloverIsExpanded: .constant(true), color1: .green, color2: .gray, strokeColor: .white, strokeWidth: 0.5, shadowColor: .green, shadowRadius: 30)
             .frame(width: 300, height: 300)
     }
 }

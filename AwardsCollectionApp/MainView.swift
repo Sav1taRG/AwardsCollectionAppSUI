@@ -24,7 +24,7 @@ struct MainView: View {
             Spacer()
             
             if awardIsShowing {
-                CustomAwardView(
+                CloverView(
                     cloverIsExpanded: $cloverIsExpanded,
                     color1: .green,
                     color2: .gray,
