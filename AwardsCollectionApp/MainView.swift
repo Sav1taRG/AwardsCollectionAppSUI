@@ -47,8 +47,8 @@ struct MainView: View {
     private func buttonAction() {
         withAnimation {
             awardIsShowing.toggle()
-            cloverIsExpanded.toggle()
         }
+        cloverIsExpanded.toggle()
     }
 }
 
