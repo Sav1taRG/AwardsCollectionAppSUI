@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     @State private var awardIsShowing = false
+    @State private var cloverIsExpanded = false
     
     var body: some View {
         VStack {
@@ -23,7 +24,16 @@ struct MainView: View {
             Spacer()
             
             if awardIsShowing {
-                GradientRectangles()
+                CustomAwardView(
+                    cloverIsExpanded: $cloverIsExpanded,
+                    color1: .green,
+                    color2: .gray,
+                    strokeColor: .white,
+                    strokeWidth: 0.5,
+                    shadowColor: .green,
+                    shadowRadius: 30
+                )
+                
                     .frame(width: 250, height: 250)
                     .transition(.leadingSlide)
             }
@@ -38,13 +48,14 @@ struct MainView: View {
         withAnimation {
             awardIsShowing.toggle()
         }
+        cloverIsExpanded.toggle()
     }
 }
 
 extension AnyTransition {
     static var leadingSlide: AnyTransition {
-        let insertion = AnyTransition.move(edge: .leading)
-            .combined(with: .scale)
+        let insertion = AnyTransition.scale
+            .combined(with: .opacity)
         let removal = AnyTransition.scale
             .combined(with: .opacity)
         return .asymmetric(insertion: insertion, removal: removal)
