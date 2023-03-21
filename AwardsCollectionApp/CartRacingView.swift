@@ -1,10 +1,3 @@
-//
-//  CartRacingView.swift
-//  AwardsCollectionApp
-//
-//  Created by Alexey Efimov on 20.05.2022.
-//
-
 import SwiftUI
 
 struct CartRacingView: View {

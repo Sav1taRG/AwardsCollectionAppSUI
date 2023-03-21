@@ -1,11 +1,3 @@
-//
-//  CurvesView.swift
-//  AwardsCollectionApp
-//
-//  Created by Alexey Efimov on 05.08.2020.
-//  Copyright © 2020 Alexey Efimov. All rights reserved.
-//
-
 import SwiftUI
 
 struct CurvesView: View {

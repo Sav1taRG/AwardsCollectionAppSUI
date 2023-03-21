@@ -1,10 +1,3 @@
-//
-//  CloverView.swift
-//  AwardsCollectionApp
-//
-//  Created by Roman Golubinko on 28.12.2022.
-//
-
 import SwiftUI
 
 struct CloverView: View {
